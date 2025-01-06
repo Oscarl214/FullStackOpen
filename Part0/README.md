@@ -7,6 +7,7 @@ sequenceDiagram
     activate server
     server-->>browser: HTML document
     deactivate server
+    Note right of browser: The note is added to the notes array in the server.
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
     activate server
@@ -18,7 +19,7 @@ sequenceDiagram
     server-->>browser: the JavaScript file
     deactivate server
 
-    Note right of browser: The browser starts executing the JavaScript code that fetches the JSON from the server
+    Note right of browser: The browser starts executing the JavaScript code that fetches the JSON from the server that now includes our new note.
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server
